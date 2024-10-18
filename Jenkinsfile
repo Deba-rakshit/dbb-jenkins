@@ -19,7 +19,7 @@ pipeline {
                             echo "Using SSH credentials: ssh-user9 trying"
                             echo "Connecting to Mainframe Host at ${MAINFRAME_HOST}:${MAINFRAME_PORT}..."
                             
-                            // Attempt SSH connection with verbose 
+                            // Attempt SSH connection with verbose logging
                             try {
                                 sh """
                                     ssh -v -p ${MAINFRAME_PORT} -o StrictHostKeyChecking=no user@${MAINFRAME_HOST} 'echo "SSH connection established."'
